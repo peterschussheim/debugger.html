@@ -121,6 +121,10 @@ class Preview extends Component {
       contents: { value }
     };
 
+    if (value.type === "undefined") {
+      return;
+    }
+
     if (value.class === "Function") {
       return this.renderFunctionPreview(value, root);
     }
